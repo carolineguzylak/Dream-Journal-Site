@@ -10,4 +10,17 @@
 #configBox{
     height:200px;
     background-color:aquamarine;
+
+    #dreamInput{
+        #submitDream{
+            background-color:pink;
+        }
+        #submitDream:hover{
+            background-color:pink;
+            cursor:pointer;
+        }
+        #submitDream:active{
+            background-color:rgb(255, 140, 159);
+        }
+    }
 }

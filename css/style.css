@@ -8,3 +8,10 @@
 #configBox {
   height: 200px;
   background-color: aquamarine; }
+  #configBox #dreamInput #submitDream {
+    background-color: pink; }
+  #configBox #dreamInput #submitDream:hover {
+    background-color: pink;
+    cursor: pointer; }
+  #configBox #dreamInput #submitDream:active {
+    background-color: #ff8c9f; }
