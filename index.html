@@ -14,72 +14,80 @@
   </head>
   <body>
 
-    <div id= "welcome">Welcome to *Dream Journal Name*</div>
-    <div id= "logo">*insert pastel yellow cresent moon with stars logo*</div>
 
-    <div class="container">
+    <div id="navbar">
+      <nav class="navbar navbar-fixed-top">
+          <a href="#" class="navbar-brand">Dream Journal</a>
+      </nav>
+    </div>
 
-        <div class="row">
+    <div class="container" id="mainContainer">
 
-          <!-- Column classes indicate the number of columns you’d like 
-            to use out of the possible 12 per row. So, if you want 
-            three equal-width columns across, you can use .col-4. -->
+      <div id= "welcome">Welcome to *Dream Journal Name*</div>
+      <div id= "logo">*insert pastel yellow cresent moon with stars logo*</div>
 
-            <div class="container-fluid col-8">
-                <div id="toDoList">
-                  <label>Dreams:</label>
-                  <ul id="dreamList"></ul>
-                </div>
+      <div class="row">
 
-            </div>
-    
-            <div class="container-fluid col-4">
-                <div id="configBox">
-                  Add a new item
-                  <div id="dreamInput">
-                    <form>
-                      <label for="dreamDescription">Dream:</label> 
+        <!-- Column classes indicate the number of columns you’d like 
+          to use out of the possible 12 per row. So, if you want 
+          three equal-width columns across, you can use .col-4. -->
 
-                      <textarea id="dreamDescription" placeHolder="Description" cols=""></textarea>
-                      <small id="descHelp" class="form-text text-muted">Give a detailed description of your dream.</small>
-                    
-                      <!-- <button data-toggle="collapse" data-target="#dreamType">Show Types:</button> -->
-                      <!-- <div id="dreamType" class="collapse"> -->
-                      
-                      <!-- Default checkboxes and radios are improved upon 
-                        with the help of .form-check, a single class for both 
-                        input types that improves the layout and 
-                        behavior of their HTML elements.  -->
-                      <label class="form-check-label" for="happy">Happy:</label>
-                      <input class="form-check-input" type="checkbox" id="happy">
+          <!-- the md the two columns to collapse when the page is shrunk -->
+          <div class="col-md-9">
+              <div id="dreamDisplay">
+                <h3>Dreams:</h3>
+                <ul id="dreamList"></ul>
+              </div>
 
-                      <label class="form-check-label" for="stressful">Stressful:</label>
-                      <input class="form-check-input" type="checkbox" id="stressful">
+          </div>
+  
+          <div class="col-md-3">
+              <div id="configBox">
+                <h3>Add a new item</h3>
+                <div id="dreamInput">
+                  <form>
+                    <label for="dreamDescription">Dream:</label> 
 
-                      <label class="form-check-label" for="sad">Sad:</label>
-                      <input class="form-check-input" type="checkbox" id="sad">
-
-                      <label class="form-check-label" for="boring">Boring:</label>
-                      <input class="form-check-input" type="checkbox" id="boring">
-
-                      <label class="form-check-label" for="exciting">Exciting</label>
-                      <input class="form-check-input" type="checkbox" id="exciting">
-                        
-                      <label class="form-check-label" for="nightmare">Nightmare</label>
-                      <input class="form-check-input" type="checkbox" id="nightmare">
-
-                      <button type="button" class="btn btn-default" id="submitDream">Submit form</button>
-
-                    </form>
-
-                    </div>
-
+                    <textarea id="dreamDescription" placeHolder="Description" cols=""></textarea>
+                    <small id="descHelp" class="form-text text-muted">Give a detailed description of your dream.</small>
                   
-                  </div>
-                </div>
-            </div>
+                    <!-- <button data-toggle="collapse" data-target="#dreamType">Show Types:</button> -->
+                    <!-- <div id="dreamType" class="collapse"> -->
+                    
+                    <!-- Default checkboxes and radios are improved upon 
+                      with the help of .form-check, a single class for both 
+                      input types that improves the layout and 
+                      behavior of their HTML elements.  -->
+                    <label class="form-check-label" for="happy">Happy:</label>
+                    <input class="form-check-input" type="checkbox" id="happy">
 
-        </div>
+                    <label class="form-check-label" for="stressful">Stressful:</label>
+                    <input class="form-check-input" type="checkbox" id="stressful">
+
+                    <label class="form-check-label" for="sad">Sad:</label>
+                    <input class="form-check-input" type="checkbox" id="sad">
+
+                    <label class="form-check-label" for="boring">Boring:</label>
+                    <input class="form-check-input" type="checkbox" id="boring">
+
+                    <label class="form-check-label" for="exciting">Exciting</label>
+                    <input class="form-check-input" type="checkbox" id="exciting">
+                      
+                    <label class="form-check-label" for="nightmare">Nightmare</label>
+                    <input class="form-check-input" type="checkbox" id="nightmare">
+
+                    <button type="button" class="btn btn-default" id="submitDream">Submit form</button>
+
+                  </form>
+
+                  </div>
+
+                
+                </div>
+              </div>
+          </div>
+
+      </div>
         
         
 

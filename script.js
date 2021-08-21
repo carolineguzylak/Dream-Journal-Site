@@ -11,7 +11,13 @@ $("#submitDream").click(function(){
         if (type == true){
             types += dreamTypes[i] + " ";
         }
+        // unchecks all boxes
+        $(dreamTypesID[i]).prop('checked', false);
     }
 
     $("#dreamList").append("<li>" + desc + types + "</li>");
+
+    // sets description to empty
+    $("#dreamDescription").val("");
+
 });

@@ -2,25 +2,36 @@
     box-sizing:border-box;
 }
 
-#toDoList{
-    background-color:pink;
-    height:200px;
-}
+#mainContainer{
 
-#configBox{
-    height:200px;
-    background-color:aquamarine;
 
-    #dreamInput{
-        #submitDream{
-            background-color:pink;
-        }
-        #submitDream:hover{
-            background-color:pink;
-            cursor:pointer;
-        }
-        #submitDream:active{
-            background-color:rgb(255, 140, 159);
+    #welcome{
+        padding:10px 10px 10px 0;
+        
+    }
+
+    #dreamDisplay{
+        background-color:pink;
+        height:400px;
+    }
+    
+    #configBox{
+        background-color:aquamarine;
+        min-height:400px;
+    
+        #dreamInput{
+            #submitDream{
+                background-color:pink;
+            }
+            #submitDream:hover{
+                background-color:pink;
+                cursor:pointer;
+            }
+            #submitDream:active{
+                background-color:rgb(255, 140, 159);
+            }
         }
     }
+
 }
+

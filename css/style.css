@@ -1,17 +1,20 @@
 * {
   box-sizing: border-box; }
 
-#toDoList {
-  background-color: pink;
-  height: 200px; }
+#mainContainer #welcome {
+  padding: 10px 10px 10px 0; }
 
-#configBox {
-  height: 200px;
-  background-color: aquamarine; }
-  #configBox #dreamInput #submitDream {
+#mainContainer #dreamDisplay {
+  background-color: pink;
+  height: 400px; }
+
+#mainContainer #configBox {
+  background-color: aquamarine;
+  min-height: 400px; }
+  #mainContainer #configBox #dreamInput #submitDream {
     background-color: pink; }
-  #configBox #dreamInput #submitDream:hover {
+  #mainContainer #configBox #dreamInput #submitDream:hover {
     background-color: pink;
     cursor: pointer; }
-  #configBox #dreamInput #submitDream:active {
+  #mainContainer #configBox #dreamInput #submitDream:active {
     background-color: #ff8c9f; }
