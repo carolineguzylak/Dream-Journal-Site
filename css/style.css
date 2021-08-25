@@ -7,6 +7,12 @@
 #mainContainer #dreamDisplay {
   background-color: pink;
   height: 400px; }
+  #mainContainer #dreamDisplay #dreamDescBox {
+    min-height: 30px;
+    background-color: #dff7ff; }
+  #mainContainer #dreamDisplay #typeBox {
+    min-height: 30px;
+    background-color: #b9fce6; }
 
 #mainContainer #configBox {
   background-color: aquamarine;
