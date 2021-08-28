@@ -13,10 +13,14 @@
     #dreamDisplay{
         background-color:pink;
         height:400px;
+        #dreamTitleBox{
+            min-height:30px;
+            background-color:rgb(184, 245, 224);
+        }
         #dreamDescBox{
             min-height:30px;
             background-color:rgb(223, 247, 255);
-        }
+        } 
         #typeBox{
             min-height:30px;
             background-color:rgb(185, 252, 230);

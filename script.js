@@ -17,15 +17,11 @@ dreamTypesID.forEach(x =>{
 
 
 class Dream{
-    constructor(desc, types){
+    constructor(title, desc, types){
+        this.title = title;
         this.desc = desc;
         this.types = types;
     }
-
-    to_str(){
-        return this.desc + " " + this.types;
-    }
-
 }
 
 function displayDream(d){
@@ -33,9 +29,11 @@ function displayDream(d){
     // $("#dreamList").append(`<li> ${d.to_str()} </li>`);
 
     // this removes previous dream from the display
-    $("#dreamDescBox").find("p").remove()
-    $("#typeBox").find("p").remove()
+    $("#dreamTitleBox").find("p").remove();
+    $("#dreamDescBox").find("p").remove();
+    $("#typeBox").find("p").remove();
 
+    $("#dreamTitleBox").append(`<p>${d.title}</p>`);
     $("#dreamDescBox").append(`<p>${d.desc}</p>`);
     $("#typeBox").append(`<p>${d.types}</p>`);
 }
@@ -67,7 +65,7 @@ $("#submitDream").click(function(){
         // unchecks all boxes
         $(dreamTypesID[i]).prop('checked', false);
     }
-    let d = new Dream($("#dreamDescription").val(), types);
+    let d = new Dream($("#dreamTitle").val(), $("#dreamDescription").val(), types);
     addedDreams.push(d)
     dreamIndex += 1;
     // sets description to empty
