@@ -5,6 +5,14 @@ const dreamTypes = ["happy", "stressful", "sad", "boring", "exciting", "nightmar
 // dreams the user has provided so far
 var addedDreams = [];
 var dreamIndex = -1;
+// total number of type boxes checked by user
+var totalTypes = 0;
+// dictionary of number of each type of dream user has had
+var typeCounter = {};
+dreamTypesID.forEach(x =>{
+    typeCounter[x] = 0;
+})
+
 
 
 
@@ -32,26 +40,40 @@ function displayDream(d){
     $("#typeBox").append(`<p>${d.types}</p>`);
 }
 
+function displayDreamAnalytics(){
+    $("#percentages").find("div").remove();
+    for (var i=0; i<dreamTypes.length; i++){
+        p = 0
+        if (totalTypes != 0){
+            p = (typeCounter[dreamTypesID[i]] / totalTypes) * 100;
+            p = Math.round(p*10)/10;
+        }
+        console.log(p)
+
+        $("#percentages").append(`<div id=${dreamTypes[i]}>${dreamTypes[i]}
+        : ${p}%</div>`);   
+    }
+}
+
 $("#submitDream").click(function(){
     var types = []
     for (var i=0; i<dreamTypesID.length; i++){
         var type = $(dreamTypesID[i]).is(":checked");
         if (type == true){
             types.push(dreamTypes[i]);
+            typeCounter[dreamTypesID[i]] += 1
+            totalTypes += 1
         }
         // unchecks all boxes
         $(dreamTypesID[i]).prop('checked', false);
     }
-
     let d = new Dream($("#dreamDescription").val(), types);
     addedDreams.push(d)
     dreamIndex += 1;
-    console.log(dreamIndex)
-
     // sets description to empty
     $("#dreamDescription").val("");
-
     displayDream(d);
+    displayDreamAnalytics();
 });
 
 $("#nextDream").click(function(){
@@ -59,8 +81,6 @@ $("#nextDream").click(function(){
         dreamIndex += 1;
         displayDream(addedDreams[dreamIndex])
     }
-    console.log(dreamIndex)
-    console.log(addedDreams)
 });
 
 $("#prevDream").click(function(){
@@ -68,6 +88,9 @@ $("#prevDream").click(function(){
         dreamIndex -= 1;
         displayDream(addedDreams[dreamIndex])
     }
-    console.log(dreamIndex)
-    console.log(addedDreams)
 });
+
+$("#calculate").click(function(){
+    displayDreamAnalytics();
+});
+

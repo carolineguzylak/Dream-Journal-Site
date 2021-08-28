@@ -24,3 +24,8 @@
     cursor: pointer; }
   #mainContainer #configBox #dreamInput #submitDream:active {
     background-color: #ff8c9f; }
+
+#analytics {
+  margin: 30px;
+  background-color: #bff0f0;
+  min-height: 300px; }
