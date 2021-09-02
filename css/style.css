@@ -37,3 +37,49 @@
   margin: 30px;
   background-color: #bca8d6;
   min-height: 300px; }
+  #subContainer #palettes .palette {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start; }
+  #subContainer #palettes #palette1 #color1 {
+    background-color: #1c1c79; }
+  #subContainer #palettes #palette1 #color2 {
+    background-color: #4c60ce; }
+  #subContainer #palettes #palette1 #color3 {
+    background-color: #585892; }
+  #subContainer #palettes #palette1 #color4 {
+    background-color: #0f0f41; }
+  #subContainer #palettes #palette2 #color1 {
+    background-color: #d14b83; }
+  #subContainer #palettes #palette2 #color2 {
+    background-color: #b242e6; }
+  #subContainer #palettes #palette2 #color3 {
+    background-color: #e9b5d9; }
+  #subContainer #palettes #palette2 #color4 {
+    background-color: #f12db7; }
+  #subContainer #palettes #palette3 #color1 {
+    background-color: #7bcc9d; }
+  #subContainer #palettes #palette3 #color2 {
+    background-color: #8895e0; }
+  #subContainer #palettes #palette3 #color3 {
+    background-color: #d9ade2; }
+  #subContainer #palettes #palette3 #color4 {
+    background-color: #45745e; }
+  #subContainer #palettes #palette4 #color1 {
+    background-color: #461486; }
+  #subContainer #palettes #palette4 #color2 {
+    background-color: #0f3764; }
+  #subContainer #palettes #palette4 #color3 {
+    background-color: #6a58ac; }
+  #subContainer #palettes #palette4 #color4 {
+    background-color: #125225; }
+  #subContainer #palettes #palette5 #color1 {
+    background-color: #fdf8c5; }
+  #subContainer #palettes #palette5 #color2 {
+    background-color: #fff781; }
+  #subContainer #palettes #palette5 #color3 {
+    background-color: #f79240; }
+  #subContainer #palettes #palette5 #color4 {
+    background-color: #f1442d; }
