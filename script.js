@@ -13,6 +13,12 @@ dreamTypesID.forEach(x =>{
     typeCounter[x] = 0;
 })
 
+const palette1 = {"c1":"rgb(28, 28, 121)", "c2":"rgb(76, 96, 206)", "c3":"rgb(88, 88, 146)", "c4":"rgb(15, 15, 65)"};
+const palette2 = {"c1":"rgb(209, 75, 131)", "c2":"rgb(178, 66, 230)", "c3":"rgb(233, 181, 217)", "c4":"rgb(241, 45, 183)"};
+const palette3 = {"c1":"rgb(123, 204, 157)", "c2":"rgb(136, 149, 224)", "c3":"rgb(217, 173, 226)", "c4":"rgb(69, 116, 94)"};
+const palette4 = {"c1":"rgb(70, 20, 134)", "c2":"rgb(15, 55, 100)", "c3":"rgb(106, 88, 172)", "c4":"rgb(18, 82, 37)"};
+const palette5 = {"c1":"rgb(253, 248, 197)", "c2":"rgb(255, 247, 129)", "c3":"rgb(247, 146, 64)", "c4":"rgb(241, 68, 45)"};
+
 
 
 
@@ -97,20 +103,25 @@ $("#calculate").click(function(){
 // color palette selector buttons
 
 $("#paletteButtons").find("input").click(function(){
-    if($("#c1radio").is(':checked')){
-        $("#dreamDisplay").css("background-color", "blue");
+    if($("#p1radio").is(':checked')){
+        $("#dreamDisplay").css("background-color", palette1["c1"]);
+        $("#submitDream").css("background-color", palette1["c1"]);
     }
-    if($("#c2radio").is(':checked')){
-        $("#dreamDisplay").css("background-color", "purple");
+    if($("#p2radio").is(':checked')){
+        $("#dreamDisplay").css("background-color", palette2["c1"]);
+        $("#submitDream").css("background-color", palette2["c1"]);
     }
-    if($("#c3radio").is(':checked')){
-        $("#dreamDisplay").css("background-color", "red");
+    if($("#p3radio").is(':checked')){
+        $("#dreamDisplay").css("background-color", palette3["c1"]);
+        $("#submitDream").css("background-color", palette3["c1"]);
     }
-    if($("#c4radio").is(':checked')){
-        $("#dreamDisplay").css("background-color", "green");
+    if($("#p4radio").is(':checked')){
+        $("#dreamDisplay").css("background-color", palette4["c1"]);
+        $("#submitDream").css("background-color", palette4["c1"]);
     }
-    if($("#c5radio").is(':checked')){
-        $("#dreamDisplay").css("background-color", "orange");
+    if($("#p5radio").is(':checked')){
+        $("#dreamDisplay").css("background-color", palette5["c1"]);
+        $("#submitDream").css("background-color", palette5["c1"]);
     }
 });
 

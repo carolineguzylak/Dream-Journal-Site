@@ -1,85 +1,92 @@
 * {
   box-sizing: border-box; }
 
-#mainContainer #welcome {
-  padding: 10px 10px 10px 0; }
+html {
+  background-color: #ecc4ff; }
 
-#mainContainer #dreamDisplay {
-  background-color: pink;
-  height: 400px; }
-  #mainContainer #dreamDisplay #dreamTitleBox {
-    min-height: 30px;
-    background-color: #b8f5e0; }
-  #mainContainer #dreamDisplay #dreamDescBox {
-    min-height: 30px;
-    background-color: #dff7ff; }
-  #mainContainer #dreamDisplay #typeBox {
-    min-height: 30px;
-    background-color: #b9fce6; }
+.navbar {
+  background-color: pink; }
 
-#mainContainer #configBox {
-  background-color: aquamarine;
-  min-height: 400px; }
-  #mainContainer #configBox #dreamInput #submitDream {
-    background-color: pink; }
-  #mainContainer #configBox #dreamInput #submitDream:hover {
+#mainContainer {
+  background-color: #ecc4ff; }
+  #mainContainer #welcome {
+    padding: 10px 10px 10px 0; }
+  #mainContainer #dreamDisplay {
     background-color: pink;
-    cursor: pointer; }
-  #mainContainer #configBox #dreamInput #submitDream:active {
-    background-color: #ff8c9f; }
+    height: 400px; }
+    #mainContainer #dreamDisplay #dreamTitleBox {
+      min-height: 30px;
+      background-color: #b8f5e0; }
+    #mainContainer #dreamDisplay #dreamDescBox {
+      min-height: 30px;
+      background-color: #dff7ff; }
+    #mainContainer #dreamDisplay #typeBox {
+      min-height: 30px;
+      background-color: #b9fce6; }
+  #mainContainer #configBox {
+    background-color: aquamarine;
+    min-height: 400px; }
+    #mainContainer #configBox #dreamInput #submitDream {
+      background-color: pink; }
+    #mainContainer #configBox #dreamInput #submitDream:hover {
+      background-color: pink;
+      cursor: pointer; }
+    #mainContainer #configBox #dreamInput #submitDream:active {
+      background-color: #ff8c9f; }
 
-#subContainer #analytics {
-  margin: 30px;
-  background-color: #bff0f0;
-  min-height: 300px; }
-
-#subContainer #palettes {
-  margin: 30px;
-  background-color: #bca8d6;
-  min-height: 300px; }
-  #subContainer #palettes .palette {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: flex-start; }
-  #subContainer #palettes #palette1 #color1 {
-    background-color: #1c1c79; }
-  #subContainer #palettes #palette1 #color2 {
-    background-color: #4c60ce; }
-  #subContainer #palettes #palette1 #color3 {
-    background-color: #585892; }
-  #subContainer #palettes #palette1 #color4 {
-    background-color: #0f0f41; }
-  #subContainer #palettes #palette2 #color1 {
-    background-color: #d14b83; }
-  #subContainer #palettes #palette2 #color2 {
-    background-color: #b242e6; }
-  #subContainer #palettes #palette2 #color3 {
-    background-color: #e9b5d9; }
-  #subContainer #palettes #palette2 #color4 {
-    background-color: #f12db7; }
-  #subContainer #palettes #palette3 #color1 {
-    background-color: #7bcc9d; }
-  #subContainer #palettes #palette3 #color2 {
-    background-color: #8895e0; }
-  #subContainer #palettes #palette3 #color3 {
-    background-color: #d9ade2; }
-  #subContainer #palettes #palette3 #color4 {
-    background-color: #45745e; }
-  #subContainer #palettes #palette4 #color1 {
-    background-color: #461486; }
-  #subContainer #palettes #palette4 #color2 {
-    background-color: #0f3764; }
-  #subContainer #palettes #palette4 #color3 {
-    background-color: #6a58ac; }
-  #subContainer #palettes #palette4 #color4 {
-    background-color: #125225; }
-  #subContainer #palettes #palette5 #color1 {
-    background-color: #fdf8c5; }
-  #subContainer #palettes #palette5 #color2 {
-    background-color: #fff781; }
-  #subContainer #palettes #palette5 #color3 {
-    background-color: #f79240; }
-  #subContainer #palettes #palette5 #color4 {
-    background-color: #f1442d; }
+#subContainer {
+  background-color: #ecc4ff; }
+  #subContainer #analytics {
+    margin: 30px;
+    background-color: #bff0f0;
+    min-height: 300px; }
+  #subContainer #palettes {
+    margin: 30px;
+    background-color: #bca8d6;
+    min-height: 300px; }
+    #subContainer #palettes .palette {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-content: flex-start; }
+    #subContainer #palettes #palette1 #color1 {
+      background-color: #1c1c79; }
+    #subContainer #palettes #palette1 #color2 {
+      background-color: #4c60ce; }
+    #subContainer #palettes #palette1 #color3 {
+      background-color: #585892; }
+    #subContainer #palettes #palette1 #color4 {
+      background-color: #0f0f41; }
+    #subContainer #palettes #palette2 #color1 {
+      background-color: #d14b83; }
+    #subContainer #palettes #palette2 #color2 {
+      background-color: #b242e6; }
+    #subContainer #palettes #palette2 #color3 {
+      background-color: #e9b5d9; }
+    #subContainer #palettes #palette2 #color4 {
+      background-color: #f12db7; }
+    #subContainer #palettes #palette3 #color1 {
+      background-color: #7bcc9d; }
+    #subContainer #palettes #palette3 #color2 {
+      background-color: #8895e0; }
+    #subContainer #palettes #palette3 #color3 {
+      background-color: #d9ade2; }
+    #subContainer #palettes #palette3 #color4 {
+      background-color: #45745e; }
+    #subContainer #palettes #palette4 #color1 {
+      background-color: #461486; }
+    #subContainer #palettes #palette4 #color2 {
+      background-color: #0f3764; }
+    #subContainer #palettes #palette4 #color3 {
+      background-color: #6a58ac; }
+    #subContainer #palettes #palette4 #color4 {
+      background-color: #125225; }
+    #subContainer #palettes #palette5 #color1 {
+      background-color: #fdf8c5; }
+    #subContainer #palettes #palette5 #color2 {
+      background-color: #fff781; }
+    #subContainer #palettes #palette5 #color3 {
+      background-color: #f79240; }
+    #subContainer #palettes #palette5 #color4 {
+      background-color: #f1442d; }

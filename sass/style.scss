@@ -1,9 +1,22 @@
+
+// Color Palette Collections
+
+
 *{
     box-sizing:border-box;
 }
 
+html{
+    background-color:rgb(236, 196, 255);
+}
+
+.navbar{
+    background-color:pink;
+}
+
 #mainContainer{
 
+    background-color:rgb(236, 196, 255);
 
     #welcome{
         padding:10px 10px 10px 0;
@@ -48,6 +61,9 @@
 }
 
 #subContainer{
+
+    background-color: rgb(236, 196, 255);
+
     #analytics{
         margin: 30px;
         background-color:rgb(191, 240, 240);
@@ -67,7 +83,7 @@
         #palette1{
             #color1{
                 background-color:rgb(28, 28, 121);
-            }
+            } 
             #color2{
                 background-color:rgb(76, 96, 206);
             }
