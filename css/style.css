@@ -28,7 +28,12 @@
   #mainContainer #configBox #dreamInput #submitDream:active {
     background-color: #ff8c9f; }
 
-#analytics {
+#subContainer #analytics {
   margin: 30px;
   background-color: #bff0f0;
+  min-height: 300px; }
+
+#subContainer #palettes {
+  margin: 30px;
+  background-color: #bca8d6;
   min-height: 300px; }

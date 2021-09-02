@@ -47,9 +47,17 @@
 
 }
 
-#analytics{
-    margin: 30px;
-    background-color:rgb(191, 240, 240);
-    min-height:300px;
+#subContainer{
+    #analytics{
+        margin: 30px;
+        background-color:rgb(191, 240, 240);
+        min-height:300px;
+    }
+    #palettes{
+        margin:30px;
+        background-color:rgb(188, 168, 214); 
+        min-height:300px;
+    }
 }
+
 
