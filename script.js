@@ -92,3 +92,25 @@ $("#calculate").click(function(){
     displayDreamAnalytics();
 });
 
+
+
+// color palette selector buttons
+
+$("#paletteButtons").find("input").click(function(){
+    if($("#c1radio").is(':checked')){
+        $("#dreamDisplay").css("background-color", "blue");
+    }
+    if($("#c2radio").is(':checked')){
+        $("#dreamDisplay").css("background-color", "purple");
+    }
+    if($("#c3radio").is(':checked')){
+        $("#dreamDisplay").css("background-color", "red");
+    }
+    if($("#c4radio").is(':checked')){
+        $("#dreamDisplay").css("background-color", "green");
+    }
+    if($("#c5radio").is(':checked')){
+        $("#dreamDisplay").css("background-color", "orange");
+    }
+});
+
