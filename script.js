@@ -103,25 +103,13 @@ $("#calculate").click(function(){
 // color palette selector buttons
 
 $("#paletteButtons").find("input").click(function(){
-    if($("#p1radio").is(':checked')){
-        $("#dreamDisplay").css("background-color", palette1["c1"]);
-        $("#submitDream").css("background-color", palette1["c1"]);
-    }
-    if($("#p2radio").is(':checked')){
-        $("#dreamDisplay").css("background-color", palette2["c1"]);
-        $("#submitDream").css("background-color", palette2["c1"]);
-    }
-    if($("#p3radio").is(':checked')){
-        $("#dreamDisplay").css("background-color", palette3["c1"]);
-        $("#submitDream").css("background-color", palette3["c1"]);
-    }
-    if($("#p4radio").is(':checked')){
-        $("#dreamDisplay").css("background-color", palette4["c1"]);
-        $("#submitDream").css("background-color", palette4["c1"]);
-    }
-    if($("#p5radio").is(':checked')){
-        $("#dreamDisplay").css("background-color", palette5["c1"]);
-        $("#submitDream").css("background-color", palette5["c1"]);
+
+    for (i=1; i<=5; i++){
+        if($(`#p${i}radio`).is(':checked')){
+            p = eval(`palette${i}`);
+            $("#dreamDisplay").css("background-color", p["c1"]);
+            $("#submitDream").css("background-color", p["c1"]);
+        }
     }
 });
 

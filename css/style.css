@@ -1,16 +1,14 @@
 * {
   box-sizing: border-box; }
 
-html {
-  background-color: #ecc4ff; }
+body {
+  background-color: #e4d9fc; }
 
 .navbar {
   background-color: pink; }
 
 #mainContainer {
   background-color: #ecc4ff; }
-  #mainContainer #welcome {
-    padding: 10px 10px 10px 0; }
   #mainContainer #dreamDisplay {
     background-color: pink;
     height: 400px; }

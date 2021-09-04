@@ -6,8 +6,10 @@
     box-sizing:border-box;
 }
 
-html{
-    background-color:rgb(236, 196, 255);
+
+
+body{
+    background-color:rgb(228, 217, 252);
 }
 
 .navbar{
@@ -17,11 +19,6 @@ html{
 #mainContainer{
 
     background-color:rgb(236, 196, 255);
-
-    #welcome{
-        padding:10px 10px 10px 0;
-        
-    }
 
     #dreamDisplay{
         background-color:pink;
