@@ -86,26 +86,43 @@
                       with the help of .form-check, a single class for both 
                       input types that improves the layout and 
                       behavior of their HTML elements.  -->
-                    <label class="form-check-label" for="happy">Happy:</label>
-                    <input class="form-check-input" type="checkbox" id="happy">
+                    <div class="col" id="buttonsBox">
+                        <!-- breaking up the buttons into different rows -->
+                        <div class="col">
+                            <label class="form-check-label" for="happy">Happy:</label>
+                            <input class="form-check-input" type="checkbox" id="happy">
 
-                    <label class="form-check-label" for="stressful">Stressful:</label>
-                    <input class="form-check-input" type="checkbox" id="stressful">
+                            <label class="form-check-label" for="stressful">Stressful:</label>
+                            <input class="form-check-input" type="checkbox" id="stressful">
+                        </div>
+                        <div class="col">
+                            <label class="form-check-label" for="sad">Sad:</label>
+                            <input class="form-check-input" type="checkbox" id="sad">
 
-                    <label class="form-check-label" for="sad">Sad:</label>
-                    <input class="form-check-input" type="checkbox" id="sad">
+                            <label class="form-check-label" for="boring">Boring:</label>
+                            <input class="form-check-input" type="checkbox" id="boring">
+                        </div>
+                        <div class="col">
+                            <label class="form-check-label" for="exciting">Exciting:</label>
+                            <input class="form-check-input" type="checkbox" id="exciting">
+                        
+                            <label class="form-check-label" for="nightmare">Nightmare:</label>
+                            <input class="form-check-input" type="checkbox" id="nightmare">
+                        </div>
 
-                    <label class="form-check-label" for="boring">Boring:</label>
-                    <input class="form-check-input" type="checkbox" id="boring">
+                        <!-- submit button -->
+                        <button type="button" class="btn btn-default" id="submitDream">Submit form</button>
 
-                    <label class="form-check-label" for="exciting">Exciting:</label>
-                    <input class="form-check-input" type="checkbox" id="exciting">
-                      
-                    <label class="form-check-label" for="nightmare">Nightmare:</label>
-                    <input class="form-check-input" type="checkbox" id="nightmare">
+                        <!-- lock dream -->
+                        <div class="col">
+                            <label class="form-check-label" for="lock">Lock dream?</label>
+                            <input class="form-check-input" type="checkbox" id="lock">
+                            <input id='passBox' placeholder='Enter a password'>
+                        </div>
+    
 
-                    <button type="button" class="btn btn-default" id="submitDream">Submit form</button>
-
+                    </div>
+    
                   </form>
 
                   </div>
@@ -124,79 +141,78 @@
 	<div class="container" id="subContainer">
 		<div class="row">
 
-			<div class="col-md-3">
+			<div class="col-3">
+                
 				<div id="palettes">
+                    Select a color palette
+                    <div class="row">
+                        <!-- buttons column -->
+                        <div class="col-3">
+                            <div id="paletteButtons">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="p1radio">
+                                    <!-- <label class="form-check-label" for="flexRadioDefault1">
+                                    </label> -->
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="p2radio">
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="p3radio">
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="p4radio">
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="p5radio">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- palettes column -->
+                        <div class="col-9">
+                            <div class="col">
+                                <div class="palette" id="palette1">
+                                    <div class="color" id="color1"></div>
+                                    <div class="color" id="color2"></div>
+                                    <div class="color" id="color3"></div>
+                                    <div class="color" id="color4"></div>
+                                </div>
+                                <div class="palette" id="palette2">
+                                    <div class="color" id="color1"></div>
+                                    <div class="color" id="color2"></div>
+                                    <div class="color" id="color3"></div>
+                                    <div class="color" id="color4"></div>
+                                </div>
+                                <div class="palette" id="palette3">
+                                    <div class="color" id="color1"></div>
+                                    <div class="color" id="color2"></div>
+                                    <div class="color" id="color3"></div>
+                                    <div class="color" id="color4"></div>
+                                </div>
+                                <div class="palette" id="palette4">
+                                    <div class="color" id="color1"></div>
+                                    <div class="color" id="color2"></div>
+                                    <div class="color" id="color3"></div>
+                                    <div class="color" id="color4"></div>
+                                </div>
+                                <div class="palette" id="palette5">
+                                    <div class="color" id="color1"></div>
+                                    <div class="color" id="color2"></div>
+                                    <div class="color" id="color3"></div>
+                                    <div class="color" id="color4"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                    </div>
 
-					<div id="paletteButtons">
-						<div class="form-check">
-							<input class="form-check-input" type="radio" name="flexRadioDefault" id="p1radio">
-							<label class="form-check-label" for="flexRadioDefault1">
-							  1
-							</label>
-						</div>
-						<div class="form-check">
-							<input class="form-check-input" type="radio" name="flexRadioDefault" id="p2radio">
-							<label class="form-check-label" for="flexRadioDefault1">
-							  2
-							</label>
-						</div>
-						<div class="form-check">
-							<input class="form-check-input" type="radio" name="flexRadioDefault" id="p3radio">
-							<label class="form-check-label" for="flexRadioDefault1">
-							  3
-							</label>
-						</div>
-						<div class="form-check">
-							<input class="form-check-input" type="radio" name="flexRadioDefault" id="p4radio">
-							<label class="form-check-label" for="flexRadioDefault1">
-							  4
-							</label>
-						</div>
-						<div class="form-check">
-							<input class="form-check-input" type="radio" name="flexRadioDefault" id="p5radio">
-							<label class="form-check-label" for="flexRadioDefault1">
-							  5
-							</label>
-						</div>
-					</div>
-
-					Select a color palette:
-					<div class="col">
-						<div class="palette" id="palette1">
-							<div id="color1">c1</div>
-							<div id="color2">c2</div>
-							<div id="color3">c3</div>
-							<div id="color4">c4</div>
-						</div>
-						<div class="palette" id="palette2">
-							<div id="color1">c1</div>
-							<div id="color2">c2</div>
-							<div id="color3">c3</div>
-							<div id="color4">c4</div>
-						</div>
-						<div class="palette" id="palette3">
-							<div id="color1">c1</div>
-							<div id="color2">c2</div>
-							<div id="color3">c3</div>
-							<div id="color4">c4</div>
-						</div>
-						<div class="palette" id="palette4">
-							<div id="color1">c1</div>
-							<div id="color2">c2</div>
-							<div id="color3">c3</div>
-							<div id="color4">c4</div>
-						</div>
-						<div class="palette" id="palette5">
-							<div id="color1">c1</div>
-							<div id="color2">c2</div>
-							<div id="color3">c3</div>
-							<div id="color4">c4</div>
-						</div>
-					</div>
+				
 				</div>
 			</div>
 
-			<div class="col-md-9">
+			<div class="col-9">
 				<div id="analytics">
 					<h3>Dream Analytics:</h3>
 					<button id="calculate">Calculate dream analytics</button>

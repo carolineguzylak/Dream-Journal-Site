@@ -70,12 +70,17 @@ body{
         margin:30px;
         background-color:rgb(188, 168, 214); 
         min-height:300px;
+        min-width:200px;
         .palette{
             display:flex;
             justify-content:flex-start;
-            flex-wrap:wrap;
+            // flex-wrap:wrap;
             flex-direction:row;
-            align-content:flex-start;
+            align-content:flex-start;  
+        }
+        .color{
+            min-width:30px;
+            min-height:30px;
         }
         #palette1{
             #color1{

@@ -20,14 +20,13 @@ const palette3 = {"c1":"#bde0fe", "c2":"#ffafcc", "c3":"#ffc8dd", "c4":"#cdb4db"
 const palette4 = {"c1":"#d8f3dc", "c2":"#b7e4c7", "c3":"#52b788", "c4":"#2d6a4f"};
 const palette5 = {"c1":"#e7ecef", "c2":"#a3cef1", "c3":"#6096ba", "c4":"#274c77"};
 
-
-
-
+// put this in a separate file?
 class Dream{
-    constructor(title, desc, types){
+    constructor(title, desc, types, locked){
         this.title = title;
         this.desc = desc;
         this.types = types;
+        this.locked = locked;
     }
 }
 
@@ -53,8 +52,6 @@ function displayDreamAnalytics(){
             p = (typeCounter[dreamTypesID[i]] / totalTypes) * 100;
             p = Math.round(p*10)/10;
         }
-        console.log(p)
-
         $("#percentages").append(`<div id=${dreamTypes[i]}>${dreamTypes[i]}
         : ${p}%</div>`);   
     }
@@ -66,19 +63,39 @@ $("#submitDream").click(function(){
         var type = $(dreamTypesID[i]).is(":checked");
         if (type == true){
             types.push(dreamTypes[i]);
-            typeCounter[dreamTypesID[i]] += 1
-            totalTypes += 1
+            typeCounter[dreamTypesID[i]] += 1;
+            totalTypes += 1;
         }
         // unchecks all boxes
         $(dreamTypesID[i]).prop('checked', false);
     }
-    let d = new Dream($("#dreamTitle").val(), $("#dreamDescription").val(), types);
+
+    locked = false;
+    password="none"
+    if ($("#lock").is(":checked")){
+        locked = true;
+        password = $("#passBox").val();
+    }
+    console.log(password);
+
+    let d = new Dream($("#dreamTitle").val(), $("#dreamDescription").val(), types, locked, password);
     addedDreams.push(d)
     dreamIndex += 1;
     // sets description to empty
     $("#dreamDescription").val("");
+    // uncheck lock
+    $("#lock").prop('checked', false);
     displayDream(d);
     displayDreamAnalytics();
+});
+
+$("#lock").click(function(){
+    if($("#passBox").is(":hidden")){
+        $("#passBox").show();
+    }
+    else{
+        $("#passBox").hide();
+    }
 });
 
 $("#nextDream").click(function(){
@@ -102,7 +119,6 @@ $("#calculate").click(function(){
 
 
 // color palette selector buttons
-
 $("#paletteButtons").find("input").click(function(){
 
     for (i=1; i<=5; i++){
@@ -110,10 +126,17 @@ $("#paletteButtons").find("input").click(function(){
             p = eval(`palette${i}`);
             $("#dreamDisplay").css("background-color", p["c1"]);
             $("#submitDream").css("background-color", p["c1"]);
+
             $("#configBox").css("background-color", p["c2"]);
             $(".navbar").css("background-color", p["c2"]);
+            $("#dreamTitleBox").css("background-color", p["c2"]);
+            $("#dreamDescBox").css("background-color", p["c2"]);
+            $("#typeBox").css("background-color", p["c2"]);
+
+
             $("body").css("background-color", p["c3"]);
             $("#analytics").css("background-color", p["c3"]);
+
             $("#mainContainer").css("background-color", p["c4"]);
             $("#subContainer").css("background-color", p["c4"]);
         }

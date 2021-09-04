@@ -41,13 +41,16 @@ body {
   #subContainer #palettes {
     margin: 30px;
     background-color: #bca8d6;
-    min-height: 300px; }
+    min-height: 300px;
+    min-width: 200px; }
     #subContainer #palettes .palette {
       display: flex;
       justify-content: flex-start;
-      flex-wrap: wrap;
       flex-direction: row;
       align-content: flex-start; }
+    #subContainer #palettes .color {
+      min-width: 30px;
+      min-height: 30px; }
     #subContainer #palettes #palette1 #color1 {
       background-color: #d7b9d5; }
     #subContainer #palettes #palette1 #color2 {
