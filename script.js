@@ -1,4 +1,3 @@
-
 const dreamTypesID = ["#happy", "#stressful", "#sad", "#boring", "#exciting", "#nightmare"];
 const dreamTypes = ["happy", "stressful", "sad", "boring", "exciting", "nightmare"];
 
@@ -20,13 +19,14 @@ const palette3 = {"c1":"#bde0fe", "c2":"#ffafcc", "c3":"#ffc8dd", "c4":"#cdb4db"
 const palette4 = {"c1":"#d8f3dc", "c2":"#b7e4c7", "c3":"#52b788", "c4":"#2d6a4f"};
 const palette5 = {"c1":"#e7ecef", "c2":"#a3cef1", "c3":"#6096ba", "c4":"#274c77"};
 
-// put this in a separate file?
 class Dream{
-    constructor(title, desc, types, locked){
+    constructor(title, desc, types, locked, password){
         this.title = title;
         this.desc = desc;
         this.types = types;
         this.locked = locked;
+        // password is equal to none if dream is not locked
+        this.password = password;
     }
 }
 
@@ -43,6 +43,8 @@ function displayDream(d){
 
     if(d.locked == true){
         $("#lockedDream").show();
+        $("#dreamTitleBox").append(`<p>This dream is locked! Enter
+            your password to unlock.</p>`);
     } else{
         $("#lockedDream").hide();
         $("#dreamTitleBox").append(`<p>${d.title}</p>`);
@@ -84,7 +86,6 @@ $("#submitDream").click(function(){
         password = $("#passBox").val();
         $("#passBox").hide();
     }
-    console.log(password);
 
     let d = new Dream($("#dreamTitle").val(), $("#dreamDescription").val(), types, locked, password);
     addedDreams.push(d)
@@ -128,7 +129,15 @@ $("#calculate").click(function(){
     displayDreamAnalytics();
 });
 
-
+$("#submitPass").click(function(){
+    pass = $("#unlockDream").val();
+    d = addedDreams[dreamIndex];
+    if (d.password == pass){
+        console.log("Here!")
+        d.locked = false;
+        displayDream(d);
+    }
+});
 
 // color palette selector buttons
 $("#paletteButtons").find("input").click(function(){
