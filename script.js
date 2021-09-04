@@ -30,6 +30,8 @@ class Dream{
     }
 }
 
+// prehide dream password entry
+$("#lockedDream").hide();
 function displayDream(d){
     // this is called a template literal
     // $("#dreamList").append(`<li> ${d.to_str()} </li>`);
@@ -39,9 +41,14 @@ function displayDream(d){
     $("#dreamDescBox").find("p").remove();
     $("#typeBox").find("p").remove();
 
-    $("#dreamTitleBox").append(`<p>${d.title}</p>`);
-    $("#dreamDescBox").append(`<p>${d.desc}</p>`);
-    $("#typeBox").append(`<p>${d.types}</p>`);
+    if(d.locked == true){
+        $("#lockedDream").show();
+    } else{
+        $("#lockedDream").hide();
+        $("#dreamTitleBox").append(`<p>${d.title}</p>`);
+        $("#dreamDescBox").append(`<p>${d.desc}</p>`);
+        $("#typeBox").append(`<p>${d.types}</p>`);
+    }
 }
 
 function displayDreamAnalytics(){
@@ -75,12 +82,15 @@ $("#submitDream").click(function(){
     if ($("#lock").is(":checked")){
         locked = true;
         password = $("#passBox").val();
+        $("#passBox").hide();
     }
     console.log(password);
 
     let d = new Dream($("#dreamTitle").val(), $("#dreamDescription").val(), types, locked, password);
     addedDreams.push(d)
     dreamIndex += 1;
+    // sets title to empty
+    $("#dreamTitle").val("");
     // sets description to empty
     $("#dreamDescription").val("");
     // uncheck lock
@@ -89,6 +99,8 @@ $("#submitDream").click(function(){
     displayDreamAnalytics();
 });
 
+// prehide the passBox
+$("#passBox").hide();
 $("#lock").click(function(){
     if($("#passBox").is(":hidden")){
         $("#passBox").show();

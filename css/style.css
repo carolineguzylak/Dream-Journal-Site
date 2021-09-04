@@ -21,6 +21,8 @@ body {
     #mainContainer #dreamDisplay #typeBox {
       min-height: 30px;
       background-color: #b9fce6; }
+    #mainContainer #dreamDisplay #submitPass {
+      background-color: #dff7ff; }
   #mainContainer #configBox {
     background-color: aquamarine;
     min-height: 400px; }
