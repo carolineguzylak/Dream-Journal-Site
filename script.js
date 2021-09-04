@@ -13,11 +13,12 @@ dreamTypesID.forEach(x =>{
     typeCounter[x] = 0;
 })
 
-const palette1 = {"c1":"rgb(28, 28, 121)", "c2":"rgb(76, 96, 206)", "c3":"rgb(88, 88, 146)", "c4":"rgb(15, 15, 65)"};
-const palette2 = {"c1":"rgb(209, 75, 131)", "c2":"rgb(178, 66, 230)", "c3":"rgb(233, 181, 217)", "c4":"rgb(241, 45, 183)"};
-const palette3 = {"c1":"rgb(123, 204, 157)", "c2":"rgb(136, 149, 224)", "c3":"rgb(217, 173, 226)", "c4":"rgb(69, 116, 94)"};
-const palette4 = {"c1":"rgb(70, 20, 134)", "c2":"rgb(15, 55, 100)", "c3":"rgb(106, 88, 172)", "c4":"rgb(18, 82, 37)"};
-const palette5 = {"c1":"rgb(253, 248, 197)", "c2":"rgb(255, 247, 129)", "c3":"rgb(247, 146, 64)", "c4":"rgb(241, 68, 45)"};
+// maybe put all palettes in a separate file then transfer them over?
+const palette1 = {"c1":"#d7b9d5", "c2":"#ada7c9", "c3":"#f4cae0", "c4":"#64a6bd"};
+const palette2 = {"c1":"#ffd7ba", "c2":"#d8e2dc", "c3":"#fae1dd", "c4":"#fec5bb"};
+const palette3 = {"c1":"#bde0fe", "c2":"#ffafcc", "c3":"#ffc8dd", "c4":"#cdb4db"};
+const palette4 = {"c1":"#d8f3dc", "c2":"#b7e4c7", "c3":"#52b788", "c4":"#2d6a4f"};
+const palette5 = {"c1":"#e7ecef", "c2":"#a3cef1", "c3":"#6096ba", "c4":"#274c77"};
 
 
 
@@ -109,6 +110,12 @@ $("#paletteButtons").find("input").click(function(){
             p = eval(`palette${i}`);
             $("#dreamDisplay").css("background-color", p["c1"]);
             $("#submitDream").css("background-color", p["c1"]);
+            $("#configBox").css("background-color", p["c2"]);
+            $(".navbar").css("background-color", p["c2"]);
+            $("body").css("background-color", p["c3"]);
+            $("#analytics").css("background-color", p["c3"]);
+            $("#mainContainer").css("background-color", p["c4"]);
+            $("#subContainer").css("background-color", p["c4"]);
         }
     }
 });
