@@ -51,6 +51,9 @@ function displayDream(d){
         $("#dreamDescBox").append(`<p>${d.desc}</p>`);
         $("#typeBox").append(`<p>${d.types}</p>`);
     }
+
+    // hide the "incorrect password" message if its there
+    $("#incorrectMessage").html("");
 }
 
 function displayDreamAnalytics(){
@@ -136,6 +139,8 @@ $("#submitPass").click(function(){
         console.log("Here!")
         d.locked = false;
         displayDream(d);
+    } else {
+        $("#incorrectMessage").html("Incorrect password");
     }
 });
 
