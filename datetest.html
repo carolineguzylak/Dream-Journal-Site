@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"> -->
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+  <script>
+  $(function() {
+    $( "#date_ex" ).datepicker({
+    showAnim: "slideDown"
+});
+  });
+  </script>
+
+<style>
+.ui-datepicker {
+	width: 17em;
+	padding: .2em .2em 0;
+	display: none;
+    background:#4F6828;  
+}
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 2.3em;
+	line-height: 1.8em;
+	text-align: center;
+    color:#FFFFFF;
+    background:#4F6828;  
+}
+.ui-datepicker table {
+	width: 100%;
+	font-size: .7em;
+	border-collapse: collapse;
+    font-family:verdana;
+	margin: 0 0 .4em;
+    color:#000000;
+    background:#DCEAC8;    
+}
+.ui-datepicker td {
+
+	border: 0;
+	padding: 1px;
+
+    
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	padding: .8em;
+	text-align: right;
+	text-decoration: none;
+}
+</style>
+  
+</head>
+<body>
+ 
+<div>Selecte Date with slideDown: <input type="text" id="date_ex"></div>
+ 
+ 
+</body>
+</html>

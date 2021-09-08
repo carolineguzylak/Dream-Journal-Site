@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- <link href="bootstrap/css/bootstrap.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-
     <link href="css/style.css" rel="stylesheet">
 
     <title>Dream Journal</title>
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
   </head>
   <body>
     
@@ -116,18 +118,21 @@
                             <input class="form-check-input" type="checkbox" id="nightmare">
                         </div>
 
-                        <!-- submit button -->
-                        <button type="button" class="btn btn-default" id="submitDream">Submit form</button>
+                    </div>
 
-                        <!-- lock dream -->
-                        <div class="col">
-                            <label class="form-check-label" for="lock">Lock dream?</label>
-                            <input class="form-check-input" type="checkbox" id="lock">
-                            <input id='passBox' placeholder='Enter a password'>
-                        </div>
+                    <div>Dream Date: <input type="text" id="datepicker"></div>
+
+                    <!-- submit button -->
+                    <button type="button" class="btn btn-default" id="submitDream">Submit form</button>
+
+                    <!-- lock dream -->
+                    <div class="col">
+                        <label class="form-check-label" for="lock">Lock dream?</label>
+                        <input class="form-check-input" type="checkbox" id="lock">
+                        <input id='passBox' placeholder='Enter a password'>
+                    </div>
     
 
-                    </div>
     
                   </form>
 
@@ -257,8 +262,6 @@
         </div>
     </div> -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- <script src="js/bootstrap.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
     <script src="script.js"></script>

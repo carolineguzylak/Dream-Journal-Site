@@ -169,3 +169,10 @@ $("#paletteButtons").find("input").click(function(){
     }
 });
 
+// datepicker
+$(function() {
+    $( "#datepicker" ).datepicker({
+    showAnim: "slideDown"
+    });
+});
+

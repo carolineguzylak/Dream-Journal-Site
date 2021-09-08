@@ -93,3 +93,34 @@ body {
       background-color: #6096ba; }
     #subContainer #palettes #palette5 #color4 {
       background-color: #274c77; }
+
+.ui-datepicker {
+  width: 17em;
+  padding: .2em .2em 0;
+  display: none;
+  background: #c4c4c4; }
+
+.ui-datepicker .ui-datepicker-title {
+  margin: 0 2.3em;
+  line-height: 1.8em;
+  text-align: center;
+  color: #FFFFFF;
+  background: #f0add9; }
+
+.ui-datepicker table {
+  width: 100%;
+  font-size: .7em;
+  font-family: arial;
+  margin: 0 0 .4em;
+  color: #5c5c5c;
+  background: #edc6ff; }
+
+.ui-datepicker td {
+  border: 0;
+  padding: 1px; }
+
+.ui-datepicker td a {
+  display: block;
+  padding: .8em;
+  text-align: right;
+  text-decoration: none; }
