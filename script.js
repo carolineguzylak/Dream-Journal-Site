@@ -19,11 +19,22 @@ const palette3 = {"c1":"#bde0fe", "c2":"#ffafcc", "c3":"#ffc8dd", "c4":"#cdb4db"
 const palette4 = {"c1":"#d8f3dc", "c2":"#b7e4c7", "c3":"#52b788", "c4":"#2d6a4f"};
 const palette5 = {"c1":"#e7ecef", "c2":"#a3cef1", "c3":"#6096ba", "c4":"#274c77"};
 
+// how to format js date:
+// https://protips.io/javascript-date-format/ 
+const dateOptions = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+}
+
 class Dream{
-    constructor(title, desc, types, locked, password){
+    constructor(title, desc, types, date, locked, password){
         this.title = title;
         this.desc = desc;
         this.types = types;
+        // is a Data js object
+        this.date = date
         this.locked = locked;
         // password is equal to none if dream is not locked
         this.password = password;
@@ -50,6 +61,8 @@ function displayDream(d){
         $("#dreamTitleBox").append(`<p>${d.title}</p>`);
         $("#dreamDescBox").append(`<p>${d.desc}</p>`);
         $("#typeBox").append(`<p>${d.types}</p>`);
+
+        $("#dateBox").append(`<p>${Intl.DateTimeFormat('en-US', dateOptions).format(d.date)}</p>`);
     }
 
     // hide the "incorrect password" message if its there
@@ -90,7 +103,11 @@ $("#submitDream").click(function(){
         $("#passBox").hide();
     }
 
-    let d = new Dream($("#dreamTitle").val(), $("#dreamDescription").val(), types, locked, password);
+    // returns a Data javascript object
+    date = $("#datepicker").datepicker("getDate");
+    console.log(date)
+
+    let d = new Dream($("#dreamTitle").val(), $("#dreamDescription").val(), types, date, locked, password);
     addedDreams.push(d)
     dreamIndex += 1;
     // sets title to empty
@@ -158,6 +175,7 @@ $("#paletteButtons").find("input").click(function(){
             $("#dreamTitleBox").css("background-color", p["c2"]);
             $("#dreamDescBox").css("background-color", p["c2"]);
             $("#typeBox").css("background-color", p["c2"]);
+            $("#dateBox").css("background-color", p["c2"]);
 
 
             $("body").css("background-color", p["c3"]);
