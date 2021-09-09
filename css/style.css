@@ -5,11 +5,9 @@ body {
   background-color: #e4d9fc; }
 
 .navbar {
-  font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 550;
-  line-height: 26.4px;
+  font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  padding: 5px;
+  font-weight: 500;
   background-color: pink; }
 
 #mainContainer {
@@ -17,35 +15,35 @@ body {
   #mainContainer #dreamDisplay {
     background-color: pink;
     height: 400px;
-    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 550;
-    line-height: 26.4px; }
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    padding: 5px;
+    font-weight: 500; }
     #mainContainer #dreamDisplay h3 {
       padding: 5px; }
     #mainContainer #dreamDisplay #dreamTitleBox {
       min-height: 30px;
-      background-color: #b8f5e0; }
+      background-color: #b8f5e0;
+      padding: 5px; }
     #mainContainer #dreamDisplay #dreamDescBox {
       min-height: 30px;
-      background-color: #dff7ff; }
+      background-color: #dff7ff;
+      padding: 5px; }
     #mainContainer #dreamDisplay #typeBox {
       min-height: 30px;
-      background-color: #b9fce6; }
+      background-color: #b9fce6;
+      padding: 5px; }
     #mainContainer #dreamDisplay #dateBox {
       min-height: 30px;
-      background-color: #d1fff0; }
+      background-color: #d1fff0;
+      padding: 5px; }
     #mainContainer #dreamDisplay #submitPass {
       background-color: #b9fce6; }
   #mainContainer #configBox {
     background-color: aquamarine;
     min-height: 400px;
-    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 550;
-    line-height: 26.4px; }
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    padding: 5px;
+    font-weight: 500; }
     #mainContainer #configBox #dreamInput #submitDream {
       background-color: pink; }
     #mainContainer #configBox #dreamInput #submitDream:hover {
@@ -56,11 +54,9 @@ body {
 
 #subContainer {
   background-color: #ecc4ff;
-  font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 550;
-  line-height: 26.4px; }
+  font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  padding: 5px;
+  font-weight: 500; }
   #subContainer #analytics {
     margin: 30px;
     background-color: #bff0f0;

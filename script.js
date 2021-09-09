@@ -51,6 +51,7 @@ function displayDream(d){
     $("#dreamTitleBox").find("p").remove();
     $("#dreamDescBox").find("p").remove();
     $("#typeBox").find("p").remove();
+    $("#dateBox").find("p").remove();
 
     if(d.locked == true){
         $("#lockedDream").show();
