@@ -5,13 +5,25 @@ body {
   background-color: #e4d9fc; }
 
 .navbar {
+  font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 550;
+  line-height: 26.4px;
   background-color: pink; }
 
 #mainContainer {
   background-color: #ecc4ff; }
   #mainContainer #dreamDisplay {
     background-color: pink;
-    height: 400px; }
+    height: 400px;
+    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 550;
+    line-height: 26.4px; }
+    #mainContainer #dreamDisplay h3 {
+      padding: 5px; }
     #mainContainer #dreamDisplay #dreamTitleBox {
       min-height: 30px;
       background-color: #b8f5e0; }
@@ -28,7 +40,12 @@ body {
       background-color: #b9fce6; }
   #mainContainer #configBox {
     background-color: aquamarine;
-    min-height: 400px; }
+    min-height: 400px;
+    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 550;
+    line-height: 26.4px; }
     #mainContainer #configBox #dreamInput #submitDream {
       background-color: pink; }
     #mainContainer #configBox #dreamInput #submitDream:hover {
@@ -38,7 +55,12 @@ body {
       background-color: #ff8c9f; }
 
 #subContainer {
-  background-color: #ecc4ff; }
+  background-color: #ecc4ff;
+  font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 550;
+  line-height: 26.4px; }
   #subContainer #analytics {
     margin: 30px;
     background-color: #bff0f0;
@@ -48,6 +70,8 @@ body {
     background-color: #bca8d6;
     min-height: 300px;
     min-width: 200px; }
+    #subContainer #palettes h6 {
+      padding-left: 5px; }
     #subContainer #palettes .palette {
       display: flex;
       justify-content: flex-start;
