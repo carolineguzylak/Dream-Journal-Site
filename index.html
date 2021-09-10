@@ -83,56 +83,55 @@
               <div id="configBox">
                 <h3>Add a new item</h3>
                 <div id="dreamInput">
-                  <form>
-                    <input id="dreamTitle" placeholder="Dream title">
+                    <!-- where the php file is integrated -->
+                    <form action="insert.php" method="POST">
+                        <!-- name is different from id, we need it for the form -->
+                        <input id="dreamTitle" name="title" placeholder="Dream title">
 
-                    <textarea id="dreamDescription" placeHolder="Description" cols=""></textarea>
-                    <small id="descHelp" class="form-text text-muted">Give a detailed description of your dream.</small>
-                  
-                    <!-- <button data-toggle="collapse" data-target="#dreamType">Show Types:</button> -->
-                    <!-- <div id="dreamType" class="collapse"> -->
+                        <textarea id="dreamDescription" name="desc" placeHolder="Description"></textarea>
+                        <small id="descHelp" class="form-text text-muted">Give a detailed description of your dream.</small>
                     
-                    <!-- Default checkboxes and radios are improved upon 
-                      with the help of .form-check, a single class for both 
-                      input types that improves the layout and 
-                      behavior of their HTML elements.  -->
-                    <div class="col" id="buttonsBox">
-                        <!-- breaking up the buttons into different rows -->
-                        <div class="col">
-                            <label class="form-check-label" for="happy">Happy:</label>
-                            <input class="form-check-input" type="checkbox" id="happy">
+                        <!-- Default checkboxes and radios are improved upon 
+                        with the help of .form-check, a single class for both 
+                        input types that improves the layout and 
+                        behavior of their HTML elements.  -->
+                        <div class="col" id="buttonsBox">
+                            <!-- breaking up the buttons into different rows -->
+                            <div class="col">
+                                <label class="form-check-label" for="happy">Happy:</label>
+                                <input class="form-check-input" type="checkbox" id="happy">
 
-                            <label class="form-check-label" for="stressful">Stressful:</label>
-                            <input class="form-check-input" type="checkbox" id="stressful">
+                                <label class="form-check-label" for="stressful">Stressful:</label>
+                                <input class="form-check-input" type="checkbox" id="stressful">
+                            </div>
+                            <div class="col">
+                                <label class="form-check-label" for="sad">Sad:</label>
+                                <input class="form-check-input" type="checkbox" id="sad">
+
+                                <label class="form-check-label" for="boring">Boring:</label>
+                                <input class="form-check-input" type="checkbox" id="boring">
+                            </div>
+                            <div class="col">
+                                <label class="form-check-label" for="exciting">Exciting:</label>
+                                <input class="form-check-input" type="checkbox" id="exciting">
+                            
+                                <label class="form-check-label" for="nightmare">Nightmare:</label>
+                                <input class="form-check-input" type="checkbox" id="nightmare">
+                            </div>
+
                         </div>
+
+                        <div>Dream Date: <input type="text" id="datepicker"></div>
+
+                        <!-- submit button -->
+                        <button type="button" class="btn btn-default" id="submitDream">Submit form</button>
+
+                        <!-- lock dream -->
                         <div class="col">
-                            <label class="form-check-label" for="sad">Sad:</label>
-                            <input class="form-check-input" type="checkbox" id="sad">
-
-                            <label class="form-check-label" for="boring">Boring:</label>
-                            <input class="form-check-input" type="checkbox" id="boring">
+                            <label class="form-check-label" for="lock">Lock dream?</label>
+                            <input class="form-check-input" type="checkbox" id="lock">
+                            <input id='passBox' placeholder='Enter a password'>
                         </div>
-                        <div class="col">
-                            <label class="form-check-label" for="exciting">Exciting:</label>
-                            <input class="form-check-input" type="checkbox" id="exciting">
-                        
-                            <label class="form-check-label" for="nightmare">Nightmare:</label>
-                            <input class="form-check-input" type="checkbox" id="nightmare">
-                        </div>
-
-                    </div>
-
-                    <div>Dream Date: <input type="text" id="datepicker"></div>
-
-                    <!-- submit button -->
-                    <button type="button" class="btn btn-default" id="submitDream">Submit form</button>
-
-                    <!-- lock dream -->
-                    <div class="col">
-                        <label class="form-check-label" for="lock">Lock dream?</label>
-                        <input class="form-check-input" type="checkbox" id="lock">
-                        <input id='passBox' placeholder='Enter a password'>
-                    </div>
     
 
     
