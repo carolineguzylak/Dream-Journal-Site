@@ -8,7 +8,8 @@
     "npm":"7.20.3"
   },
   "scripts": {
-    "compile_sass": "node-sass sass/style.scss css/style.css -w"
+    "compile_sass": "node-sass sass/style.scss css/style.css -w",
+    "start":"node express.js"
   },
   "author": "",
   "license": "ISC",
