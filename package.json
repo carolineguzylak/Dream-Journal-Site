@@ -3,17 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
-  "engines":{
-    "node":"16.6.2",
-    "npm":"7.20.3"
+  "engines": {
+    "node": "16.6.2",
+    "npm": "7.20.3"
   },
   "scripts": {
-    "compile_sass": "node-sass sass/style.scss css/style.css -w",
-    "start":"node express.js"
+    "compile_sass": "node-sass client/sass/style.scss css/style.css -w",
+    "start": "node express.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "node-sass": "^6.0.1"
   }
