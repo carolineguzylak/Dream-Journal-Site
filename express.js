@@ -4,7 +4,7 @@ const app = express();
 // the '/' is if we are at localhost:5000/ 
 // we are sending a get request to the root route
 app.get('/', (req, res) => {
-    res.send({hi: 'there'});
+    res.send({bye: 'see you soon!'});
 });
 
 
