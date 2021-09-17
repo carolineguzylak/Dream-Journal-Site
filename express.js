@@ -30,7 +30,7 @@ var connection = mysql.createConnection({
 // THIS OPENS THE STATIC WEBPAGE
 // has the same function as res.sendFile('client/index.html')
 // in app.get
-app.use(express.static('client'))
+app.use(express.static('mainpage'))
 
 // login route
 app.get('/login', (req, res) => {
