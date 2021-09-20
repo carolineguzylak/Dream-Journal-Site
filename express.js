@@ -85,6 +85,8 @@ app.post('/auth', (req, res) => {
 	}
 });
 
+// this provides css styling
+app.use(express.static('mainpage'))
 //main page
 app.get('/home', (req, res) => {
     res.sendFile(__dirname + '/mainpage/index.html');
