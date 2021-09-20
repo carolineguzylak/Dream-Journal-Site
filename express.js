@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 5000;
 // in the console 
 var mysql = require('mysql');
 const express = require('express');
+// body parser allows us to interact with form data
 const bodyParser = require('body-parser');
 const session = require('express-session');
 
@@ -70,7 +71,9 @@ app.post('/auth', (req, res) => {
 			if (results.length > 0) {
 				// request.session.loggedin = true;
 				// request.session.username = username;
-				res.redirect('/');
+				res.redirect('/home');
+                // res.sendFile(__dirname + '/mainpage/index.html');
+                // res.send("logged in!");
 			} else {
 				res.send('Incorrect Email and/or Password!');
 			}			
@@ -80,6 +83,11 @@ app.post('/auth', (req, res) => {
 		res.send('Please enter Email and Password!');
 		res.end();
 	}
+});
+
+//main page
+app.get('/home', (req, res) => {
+    res.sendFile(__dirname + '/mainpage/index.html');
 });
 
 
