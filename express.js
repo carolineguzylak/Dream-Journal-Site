@@ -27,11 +27,8 @@ var connection = mysql.createConnection({
 	database : 'DREAMS'
 });
 
-
-// THIS OPENS THE STATIC WEBPAGE
-// has the same function as res.sendFile('client/index.html')
-// in app.get
-// app.use(express.static('mainpage'))
+// // this provides css styling
+// app.use(express.static('mainpage/css/style.css'))
 
 // welcomepage
 app.get('/', (req, res) => {
@@ -85,8 +82,7 @@ app.post('/auth', (req, res) => {
 	}
 });
 
-// this provides css styling
-app.use(express.static('mainpage'))
+
 //main page
 app.get('/home', (req, res) => {
     res.sendFile(__dirname + '/mainpage/index.html');
