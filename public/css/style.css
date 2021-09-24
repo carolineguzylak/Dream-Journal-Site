@@ -147,3 +147,25 @@ body {
   padding: .8em;
   text-align: right;
   text-decoration: none; }
+
+#welcomeMain {
+  text-align: center;
+  margin-top: 60px; }
+  #welcomeMain #welcomeTitle {
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-weight: 500;
+    padding: 9px;
+    color: #454549;
+    font-size: 30px; }
+  #welcomeMain #welcomeDesc {
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-weight: 500;
+    padding: 9px;
+    color: #454549;
+    font-size: 20px; }
+  #welcomeMain #welcomeLogin {
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-weight: 500;
+    padding: 9px;
+    color: #454549;
+    font-size: 20px; }

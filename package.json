@@ -8,8 +8,7 @@
     "npm": "7.20.3"
   },
   "scripts": {
-    "compile_sass": "node-sass mainpage/sass/style.scss mainpage/css/style.css -w",
-    "sass_welcome": "node-sass welcomepage/sass/style.scss welcomepage/css/style.css -w",
+    "compile_sass": "node-sass public/sass/style.scss public/css/style.css -w",
     "start": "node express.js"
   },
   "author": "",

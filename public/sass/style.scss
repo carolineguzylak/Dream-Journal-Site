@@ -1,9 +1,17 @@
 
-
+// mainpage settings
 @mixin font_settings{
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     padding:5px;
     font-weight:500;
+}
+
+// welcome page settings
+@mixin welcome_font_settings{
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-weight:500;
+    padding:9px;
+    color:rgb(69, 69, 73);
 }
 
 *{
@@ -179,6 +187,8 @@ body{
 }
 
 
+
+
 // date picker
 .ui-datepicker {
 	width: 17em;
@@ -201,7 +211,7 @@ body{
     color:#5c5c5c;
     background:#edc6ff;    
 }
-.ui-datepicker td {
+.ui-datepicker td { 
 	border: 0;
 	padding: 1px;
 }
@@ -214,11 +224,19 @@ body{
 }
 
 
-
-
-
-// For welcome.html
 #welcomeMain{
-    margin-top: 30px;
-    font-size:30px;
+    text-align:center;
+    margin-top:60px;
+    #welcomeTitle{
+        @include welcome_font_settings;
+        font-size:30px;
+    }
+    #welcomeDesc{
+        @include welcome_font_settings;
+        font-size:20px;
+    }
+    #welcomeLogin{
+        @include welcome_font_settings;
+        font-size:20px;
+    }
 }
