@@ -223,20 +223,3 @@ body{
 	text-decoration: none;
 }
 
-
-#welcomeMain{
-    text-align:center;
-    margin-top:60px;
-    #welcomeTitle{
-        @include welcome_font_settings;
-        font-size:30px;
-    }
-    #welcomeDesc{
-        @include welcome_font_settings;
-        font-size:20px;
-    }
-    #welcomeLogin{
-        @include welcome_font_settings;
-        font-size:20px;
-    }
-}

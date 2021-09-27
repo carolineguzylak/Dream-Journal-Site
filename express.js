@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 5000;
 // npm install module_name
 // in the console 
 var mysql = require('mysql');
+var path = require('path');
 const express = require('express');
 // body parser allows us to interact with form data
 const bodyParser = require('body-parser');
@@ -18,26 +19,26 @@ const app = express();
 app.use(bodyParser.urlencoded({
     extended: false
 })); 
-app.use(bodyParser.json());
+app.use(bodyParser.json()); 
 
 var connection = mysql.createConnection({
 	host     : 'localhost',
 	user     : 'root',
 	password : '',
 	database : 'DREAMS'
-});
+}); 
 
 // // this provides css styling
-// app.use(express.static('mainpage/css/style.css'))
-
+app.use(express.static(__dirname + 'public'));
+ 
 // welcomepage
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/welcomepage/welcome.html');
+    res.sendFile(__dirname + '/welcome.html');
 });
 
-// login route
+// login route 
 app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/login/login.html');
+    res.sendFile(__dirname + '/login.html');
 });
 
 app.post('/auth', (req, res) => {
