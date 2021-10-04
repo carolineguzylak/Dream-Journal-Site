@@ -16,6 +16,10 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 
 const app = express();
+
+// // this provides css styling
+app.use(express.static('public'));
+
 app.use(bodyParser.urlencoded({
     extended: false
 })); 
@@ -27,9 +31,6 @@ var connection = mysql.createConnection({
 	password : '',
 	database : 'DREAMS'
 }); 
-
-// // this provides css styling
-app.use(express.static(__dirname + 'public'));
  
 // welcomepage
 app.get('/', (req, res) => {
