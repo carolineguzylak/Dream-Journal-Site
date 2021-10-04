@@ -19,8 +19,14 @@ const app = express();
 
 // // this provides css styling
 app.use(express.static('public'));
-// allows mainpage js file to be accessed
-// app.use(express.static('mainpage'));
+// because we use public as the static root, the 
+// srcs and hrefs must use paths without public at the beginning,
+// since we have already set public as the root.
+// That's why there are two versions of hookups for css and js
+// files in fiels like index.html, so the static files can be accessed
+// in both the express server and the live vscode server for testing.
+// for details: https://expressjs.com/en/starter/static-files.html
+
 
 app.use(bodyParser.urlencoded({
     extended: false
