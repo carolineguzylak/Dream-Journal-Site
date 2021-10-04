@@ -20,7 +20,7 @@ const app = express();
 // // this provides css styling
 app.use(express.static('public'));
 // allows mainpage js file to be accessed
-app.use(express.static('mainpage'));
+// app.use(express.static('mainpage'));
 
 app.use(bodyParser.urlencoded({
     extended: false
@@ -89,9 +89,7 @@ app.post('/auth', (req, res) => {
 
 //main page
 app.get('/home', (req, res) => {
-    res.sendFile(__dirname + '/mainpage/index.html');
+    res.sendFile(__dirname + '/index.html');
 });
-
-
 
 app.listen(PORT);
