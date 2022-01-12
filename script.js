@@ -1,3 +1,7 @@
+
+
+console.log("file connected.");
+
 const dreamTypesID = ["#happy", "#stressful", "#sad", "#boring", "#exciting", "#nightmare"];
 const dreamTypes = ["happy", "stressful", "sad", "boring", "exciting", "nightmare"];
 
@@ -30,6 +34,7 @@ const dateOptions = {
 
 class Dream{
     constructor(title, desc, types, date, locked, password){
+        console.log("Creating new dream");
         this.title = title;
         this.desc = desc;
         this.types = types;
@@ -189,6 +194,7 @@ $("#paletteButtons").find("input").click(function(){
 });
 
 // datepicker
+//FIX LATER
 $(function() {
     $( "#datepicker" ).datepicker({
     showAnim: "slideDown"

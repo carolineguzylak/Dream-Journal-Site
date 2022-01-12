@@ -25,6 +25,8 @@ body{
 .navbar{
     @include font_settings;
     background-color:pink;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
 }
 
 #mainContainer{
@@ -33,7 +35,9 @@ body{
 
     #dreamDisplay{
         background-color:pink;
-        height:400px;
+        height:430px;
+        margin-top: 10px;
+        border: 5px solid white;
         @include font_settings;
         h3{
             padding:5px;
@@ -66,6 +70,8 @@ body{
     #configBox{
         background-color:aquamarine;
         min-height:400px;
+        margin-top: 10px;
+        border: 5px solid white;
         @include font_settings;
         #dreamInput{
             #submitDream{
@@ -90,15 +96,23 @@ body{
     background-color: rgb(236, 196, 255);
     @include font_settings;
     #analytics{
+        border: 5px solid white;
         margin: 30px;
         background-color:rgb(191, 240, 240);
         min-height:300px;
+        #analyticsContent {
+            margin: 20px;
+        }
     }
     #palettes{
+        border: 5px solid white;
         margin:30px;
         background-color:rgb(188, 168, 214); 
         min-height:300px;
         min-width:200px;
+        #paletteContent {
+            margin: 10px;
+        }
         h6{
             padding-left:5px;
         }

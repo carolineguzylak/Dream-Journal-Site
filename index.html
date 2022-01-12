@@ -8,15 +8,17 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <!-- works for static file -->
-    <link href="../public/css/style.css" type="text/css" rel="stylesheet">
+    <link href="public/css/style.css" type="text/css" rel="stylesheet">
     <!-- works for express server -->
-    <link href="./css/style.css" type="text/css" rel="stylesheet">
+    <!-- <link href="./css/style.css" type="text/css" rel="stylesheet"> -->
     <!-- works if both are kept for now -->
 
     <title>Dream Journal</title>
 
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
   </head>
   <body>
@@ -50,7 +52,7 @@
 
     <div class="container" id="mainContainer">
 
-      <div id= "logo">*insert pastel yellow cresent moon with stars logo*</div>
+      <div id= "logo"></div>
 
       <div class="row" id="mainContainerRow">
 
@@ -160,81 +162,83 @@
 			<div class="col-3">
                 
 				<div id="palettes">
-                    <h6>Select a color palette</h6>
-                    <div class="row">
-                        <!-- buttons column -->
-                        <div class="col-3">
-                            <div id="paletteButtons">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="p1radio">
-                                    <!-- <label class="form-check-label" for="flexRadioDefault1">
-                                    </label> -->
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="p2radio">
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="p3radio">
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="p4radio">
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="p5radio">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- palettes column -->
-                        <div class="col-9">
-                            <div class="col">
-                                <div class="palette" id="palette1">
-                                    <div class="color" id="color1"></div>
-                                    <div class="color" id="color2"></div>
-                                    <div class="color" id="color3"></div>
-                                    <div class="color" id="color4"></div>
-                                </div>
-                                <div class="palette" id="palette2">
-                                    <div class="color" id="color1"></div>
-                                    <div class="color" id="color2"></div>
-                                    <div class="color" id="color3"></div>
-                                    <div class="color" id="color4"></div>
-                                </div>
-                                <div class="palette" id="palette3">
-                                    <div class="color" id="color1"></div>
-                                    <div class="color" id="color2"></div>
-                                    <div class="color" id="color3"></div>
-                                    <div class="color" id="color4"></div>
-                                </div>
-                                <div class="palette" id="palette4">
-                                    <div class="color" id="color1"></div>
-                                    <div class="color" id="color2"></div>
-                                    <div class="color" id="color3"></div>
-                                    <div class="color" id="color4"></div>
-                                </div>
-                                <div class="palette" id="palette5">
-                                    <div class="color" id="color1"></div>
-                                    <div class="color" id="color2"></div>
-                                    <div class="color" id="color3"></div>
-                                    <div class="color" id="color4"></div>
-                                </div>
-                            </div>
-                        </div>
-    
-    
+                    <div id="paletteContent">
+                      <h6>Select a color palette</h6>
+                      <div class="row">
+                          <!-- buttons column -->
+                          <div class="col-3">
+                              <div id="paletteButtons">
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="p1radio">
+                                      <!-- <label class="form-check-label" for="flexRadioDefault1">
+                                      </label> -->
+                                  </div>
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="p2radio">
+                                  </div>
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="p3radio">
+                                  </div>
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="p4radio">
+                                  </div>
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="p5radio">
+                                  </div>
+                              </div>
+                          </div>
+                          
+                          <!-- palettes column -->
+                          <div class="col-9">
+                              <div class="col">
+                                  <div class="palette" id="palette1">
+                                      <div class="color" id="color1"></div>
+                                      <div class="color" id="color2"></div>
+                                      <div class="color" id="color3"></div>
+                                      <div class="color" id="color4"></div>
+                                  </div>
+                                  <div class="palette" id="palette2">
+                                      <div class="color" id="color1"></div>
+                                      <div class="color" id="color2"></div>
+                                      <div class="color" id="color3"></div>
+                                      <div class="color" id="color4"></div>
+                                  </div>
+                                  <div class="palette" id="palette3">
+                                      <div class="color" id="color1"></div>
+                                      <div class="color" id="color2"></div>
+                                      <div class="color" id="color3"></div>
+                                      <div class="color" id="color4"></div>
+                                  </div>
+                                  <div class="palette" id="palette4">
+                                      <div class="color" id="color1"></div>
+                                      <div class="color" id="color2"></div>
+                                      <div class="color" id="color3"></div>
+                                      <div class="color" id="color4"></div>
+                                  </div>
+                                  <div class="palette" id="palette5">
+                                      <div class="color" id="color1"></div>
+                                      <div class="color" id="color2"></div>
+                                      <div class="color" id="color3"></div>
+                                      <div class="color" id="color4"></div>
+                                  </div>
+                              </div>
+                          </div>
+      
+      
+                      </div>
                     </div>
-
 				
 				</div>
 			</div>
 
 			<div class="col-9">
 				<div id="analytics">
-					<h3>Dream Analytics:</h3>
-					<button id="calculate">Calculate dream analytics</button>
-					<div id="percentages">
-					</div>
-				  </div>
+          <div id="analyticsContent">
+            <h3>Dream Analytics:</h3>
+            <button id="calculate">Calculate dream analytics</button>
+            <div id="percentages"></div>
+          </div>
+				</div>
 			</div> 
 
 		</div>
@@ -269,11 +273,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-    
+    <script src="script.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+     -->
     <!-- for static file -->
-    <script src="public/js/script.js"></script>
+    <!-- <script src="public/js/script.js"></script> -->
+    <!-- <script src="script.js"></script> -->
     <!-- for express server -->
-    <script src="./js/script.js"></script>
+    <!-- <script src="./js/script.js"></script> -->
 
   </body>
 </html>

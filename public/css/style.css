@@ -8,13 +8,17 @@ body {
   font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
   padding: 5px;
   font-weight: 500;
-  background-color: pink; }
+  background-color: pink;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white; }
 
 #mainContainer {
   background-color: #ecc4ff; }
   #mainContainer #dreamDisplay {
     background-color: pink;
-    height: 400px;
+    height: 430px;
+    margin-top: 10px;
+    border: 5px solid white;
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     padding: 5px;
     font-weight: 500; }
@@ -41,6 +45,8 @@ body {
   #mainContainer #configBox {
     background-color: aquamarine;
     min-height: 400px;
+    margin-top: 10px;
+    border: 5px solid white;
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     padding: 5px;
     font-weight: 500; }
@@ -58,14 +64,20 @@ body {
   padding: 5px;
   font-weight: 500; }
   #subContainer #analytics {
+    border: 5px solid white;
     margin: 30px;
     background-color: #bff0f0;
     min-height: 300px; }
+    #subContainer #analytics #analyticsContent {
+      margin: 20px; }
   #subContainer #palettes {
+    border: 5px solid white;
     margin: 30px;
     background-color: #bca8d6;
     min-height: 300px;
     min-width: 200px; }
+    #subContainer #palettes #paletteContent {
+      margin: 10px; }
     #subContainer #palettes h6 {
       padding-left: 5px; }
     #subContainer #palettes .palette {
@@ -147,25 +159,3 @@ body {
   padding: .8em;
   text-align: right;
   text-decoration: none; }
-
-#welcomeMain {
-  text-align: center;
-  margin-top: 60px; }
-  #welcomeMain #welcomeTitle {
-    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-weight: 500;
-    padding: 9px;
-    color: #454549;
-    font-size: 30px; }
-  #welcomeMain #welcomeDesc {
-    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-weight: 500;
-    padding: 9px;
-    color: #454549;
-    font-size: 20px; }
-  #welcomeMain #welcomeLogin {
-    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-weight: 500;
-    padding: 9px;
-    color: #454549;
-    font-size: 20px; }
